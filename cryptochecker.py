@@ -3,15 +3,15 @@ import requests
 
 #previousAmount = open("previousAmount.txt", "r").read()
 
-Gemini_BTC_Amount = 0.00000000
-Gemini_ETH_Amount = 0.00000000
+Gemini_BTC_Amount = 0.000000
+Gemini_ETH_Amount = 0.000000
 
 Gdax_BTC_Amount = 0.00000000
 Gdax_ETH_Amount = 0.00000000
 Gdax_LTC_Amount = 0.00000000
 
-Total_USD_Investment = 00.00
-Total_BTC_Investment = 00.00
+Total_USD_Investment = 00
+Total_BTC_Investment = 00
 
 ## URLs ##
 ##############################################################################
@@ -85,7 +85,7 @@ average_BTC_Price = ((dec_Gdax_BTC_Rate+dec_Gemini_BTC_Rate)/2)
 
 currentAmount = (average_BTC_Price*Total_BTC_Investment)
 currentAmount = round(currentAmount,2)
-previousAmount = float(previousAmount)
+#previousAmount = float(previousAmount)
 
 
 
@@ -117,23 +117,23 @@ previousAmount = float(previousAmount)
 		
 	
 	
-print ""
-print ""
-print "+----------------------------------------------------------+"
-print "  GDAX    BTC :  ${0:.2f}".format(dec_Gdax_BTC_Rate)," X ",Total_BTC_Investment," BTC = ${0:.2f}".format(converted_Gdax_BTC)
-print "  GDAX    ETH :   ${0:.2f}".format(dec_Gdax_ETH_Rate)
-print "  GDAX    LTC :   ${0:.2f}".format(dec_Gdax_LTC_Rate)
-print "|----------------------------------------------------------|"
-print "  Gemini  BTC :  ${0:.2f}".format(dec_Gemini_BTC_Rate)," X ",Total_BTC_Investment," BTC = ${0:.2f}".format(converted_Gemini_BTC)
-print "  Gemini  ETH :   ${0:.2f}".format(dec_Gemini_ETH_Rate)
-print "|----------------------------------------------------------|"
-print ""
-print "  Average BTC Price : ${0:.2f}".format(average_BTC_Price)
-print ""
-print "               Total Investment  : ${0:.2f}".format(Total_USD_Investment)
-print "               Current Value     : ${0:.2f}".format(currentAmount)
-print "                                  ---------"
-print "                         Change  : ${0:.2f}".format(currentAmount - Total_USD_Investment) + "     {0:.2f}".format(((currentAmount - Total_USD_Investment)/Total_USD_Investment)*100), "%"
-print ""
-print "+----------------------------------------------------------+"
-print ""
+print ("")
+print ("")
+print ("+----------------------------------------------------------+")
+print ("  GDAX    BTC :  ${0:.2f}".format(dec_Gdax_BTC_Rate)," X ",Total_BTC_Investment," BTC = ${0:.2f}".format(converted_Gdax_BTC))
+print ("  GDAX    ETH :   ${0:.2f}".format(dec_Gdax_ETH_Rate))
+print ("  GDAX    LTC :   ${0:.2f}".format(dec_Gdax_LTC_Rate))
+print ("|----------------------------------------------------------|")
+print ("  Gemini  BTC :  ${0:.2f}".format(dec_Gemini_BTC_Rate)," X ",Total_BTC_Investment," BTC = ${0:.2f}".format(converted_Gemini_BTC))
+print ("  Gemini  ETH :   ${0:.2f}".format(dec_Gemini_ETH_Rate))
+print ("|----------------------------------------------------------|")
+print ("")
+print ("  Average BTC Price : ${0:.2f}".format(average_BTC_Price))
+print ("")
+print ("               Total Investment  : ${0:.2f}".format(Total_USD_Investment))
+print ("               Current Value     : ${0:.2f}".format(currentAmount))
+print ("                                  ---------")
+print ("                         Change  : ${0:.2f}".format(currentAmount - Total_USD_Investment) + "     {0:.2f}".format(((currentAmount - Total_USD_Investment)/Total_USD_Investment)*100), "%")
+print ("")
+print ("+----------------------------------------------------------+")
+print ("")
